@@ -2,7 +2,7 @@
   <div class="container mx-auto max-w-7xl px-3">
     <article v-for="project in projects" :key="project.slug">
       <nuxt-content :document="project" />
-      <nuxt-link :to="`/${project.link}`">{{ project.title }}</nuxt-link>
+      <nuxt-link :to="`/${project.slug}`">{{ project.title }}</nuxt-link>
     </article>
   </div>
 </template>
