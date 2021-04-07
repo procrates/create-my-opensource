@@ -1,0 +1,13 @@
+[build]
+  command = "npm run generate"
+  functions = "functions"
+  publish = "dist"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[dev]
+  jwtRolePath = "app_metadata.authorization.roles" # Object path we should look for role values for JWT based redirects
+  autoLaunch = false # a Boolean value that determines if Netlify Dev launches the local server address in your browser

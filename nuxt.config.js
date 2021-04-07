@@ -17,7 +17,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/vuex-persist.client'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -44,7 +44,14 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-
+  publicRuntimeConfig: {
+    axios: {
+      baseURL:
+        process.env.NODE_ENV === 'production'
+          ? process.env.BASE_URL || 'http://localhost:8888/'
+          : 'http://localhost:8888/',
+    },
+  },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
