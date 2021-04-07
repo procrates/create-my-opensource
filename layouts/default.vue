@@ -64,7 +64,7 @@
           <div class="hidden lg:ml-4 lg:flex lg:items-center lg:pr-0.5">
             <span class="relative z-0 inline-flex shadow-sm rounded-md">
               <nuxt-link
-                to="/login"
+                to="/sign-in"
                 type="button"
                 class="relative inline-flex items-center px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:z-10 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
               >
